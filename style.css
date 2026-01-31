@@ -101,8 +101,10 @@ body {
         width: 65vmin;
         height: 55vmin;
         gap:15px;
+        margin-top: 25px;
     }
 }
+
 
 
 
