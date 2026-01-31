@@ -94,4 +94,11 @@ body {
     .heading{
         font-size: x-large;
     }
+
+}
+@media screen and (max-height: 700px) {
+    .gameContainer {
+        width: 70vmin;
+        height: 70vmin;
+    }
 }
