@@ -100,15 +100,9 @@ body {
     .gameContainer {
         width: 65vmin;
         height: 50vmin;
-        margin-top: 25px;
-        gap: 15px;
-    }
-    .realMsg {
-        margin-top: 10px;
-    }
-    #reset{
-        margin-top: 40px;
+        gap:15px;
     }
 }
+
 
 
