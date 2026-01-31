@@ -98,7 +98,8 @@ body {
 }
 @media screen and (max-height: 700px) {
     .gameContainer {
-        width: 70vmin;
-        height: 70vmin;
+        width: 65vmin;
+        height: 60vmin;
     }
 }
+
