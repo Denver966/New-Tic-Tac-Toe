@@ -87,6 +87,10 @@ body {
 }
 
 @media screen and (max-width: 680px) {
+    .box{
+        width: 18vmin;
+        height: 18vmin;
+    }
     .heading{
         font-size: x-large;
     }
@@ -100,6 +104,7 @@ body {
         margin-top: 25px;
     }
 }
+
 
 
 
