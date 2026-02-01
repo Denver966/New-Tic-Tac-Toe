@@ -2,6 +2,9 @@ let boxes = document.querySelectorAll('.box')
 let resetBtn = document.querySelector('#reset')
 let msg = document.querySelector('.msg')
 let realMsg = document.querySelector('.realMsg')
+let moveCount = 0;
+let isWinner = false;
+let turnX = true;
 
 const winPatrens = [
     [0, 1, 2],
@@ -13,14 +16,16 @@ const winPatrens = [
     [3, 4, 5],
     [6, 7, 8]
 ];
-let turnX = true;
+
+
 
 const resetGame = () =>{
     turnX = true;
     enableBoxes();
     realMsg.style.display = 'none'
     realMsg.innerText = '';
-    gameDraw = 0;
+    moveCount = 0;
+    isWinner = false;
 }
 
 
@@ -37,8 +42,12 @@ boxes.forEach((box) => {
         }
         
         box.disabled = true;
+        moveCount++;
 
         checkWiner();
+        if (moveCount === 9 && !isWinner) {
+            gamDraw();
+        }
     });
 });
 
@@ -57,6 +66,7 @@ const enableBoxes = () =>{
 const showWinner = (winner) =>{
     realMsg.innerText = `Congratulations The Winner is ${winner}`
     realMsg.style.display = 'block'
+    isWinner = true;
     disableBoxes();
 }
 
@@ -74,19 +84,6 @@ const checkWiner = () => {
     }
 }
 }
-
-let gameDraw = 0;
-
-boxes.forEach((box)=>{
-    box.addEventListener('click', ()=>{
-        gameDraw++
-        if(gameDraw === 9){
-           if(realMsg.innerText === ''){
-            gamDraw()
-           }
-        }
-    })
-})
 
 
 const gamDraw = () =>{
